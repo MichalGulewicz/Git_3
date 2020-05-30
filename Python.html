@@ -1,33 +1,27 @@
 <html>
   <body>
-    <h1>Przykładowy kod w pythonie</h1>
+    <h2>Program wskazuje ile wylosowano liczb większych i mniejszych od ich średniej arytmetycznej</h2>
 import math
 from random import randint
 tablica=[]
-for i in range (10):
-    tablica.append(randint(-10,10))
+for i in range (100):
+    tablica.append(randint(0,100))
 
 print(tablica)
 x=0
 
-maximum=max(tablica)
-minimum=min(tablica)
+wieksze=0
+mniejsze=0
 srednia=sum(tablica)/len(tablica)
-tablicaMniejsze=[]
-tablicaWieksze=[]
 while x<len(tablica):
     if tablica[x]<srednia:
-        tablicaMniejsze.append(tablica[x])
+        wieksze+=1
     elif tablica[x]>srednia:
-        tablicaWieksze.append(tablica[x])
+        mniejsze+=1
     x+=1
+print("liczb większych od średniej: ", wieksze)
+print("liczb mniejszych od średniej: ", mniejsze)
 
-
-print("minimum: ",minimum,"\nmaximum: ",maximum, "\nśrednia: ", srednia)
-z=tablica
-z.reverse()
-print("Kolejność odwrotna:\n",z)
-print("większe od średniej: ",len(tablicaWieksze)," ",tablicaWieksze,)
-print("mniejsze od średniej: ",len(tablicaMniejsze)," ",tablicaMniejsze)
+    <h1>Koniec przykładu</h1>
   </body>
 </html>
